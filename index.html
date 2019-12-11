@@ -1,6 +1,38 @@
-<style>
-  body {
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-  }
-</style>
-<body />
+<html>
+  <head>
+    <style>
+      * {
+        font-family: monospace;
+        margin: 0;
+        padding: 0;
+        transition: all;
+      }
+
+      :root {
+        --background-disco-crush: linear-gradient(
+          90deg,
+          #fc466b 0%,
+          #3f5efb 100%
+        );
+        --background-bloody-mimosa: linear-gradient(
+          90deg,
+          #d53369 0%,
+          #daae51 100%
+        );
+
+        --background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background: var(--background-bloody-mimosa);
+        }
+      }
+
+      body {
+        background: var(--background);
+      }
+    </style>
+  </head>
+  <body />
+</html>
